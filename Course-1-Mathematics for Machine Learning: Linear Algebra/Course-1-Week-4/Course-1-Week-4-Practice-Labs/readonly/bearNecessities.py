@@ -14,7 +14,7 @@ blue1 = (70/255, 101/255, 137/255)
 blue2 = (122/255, 174/255, 215/255)
 
 def gsBasis(A) :
-    B = np.array(A, dtype=np.float_)
+    B = np.array(A, dtype=np.float64)
     B[:, 0] = B[:, 0] / la.norm(B[:, 0])
     B[:, 1] = B[:, 1] - B[:, 1] @ B[:, 0] * B[:, 0]
     if la.norm(B[:, 1]) > 1e-14 :
